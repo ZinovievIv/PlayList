@@ -46,7 +46,8 @@
             app:icon="@drawable/magnifier"
             app:iconGravity="textStart"
             app:iconPadding="8dp"
-            app:iconTint="@color/black"/>
+            app:iconTint="@color/black"
+            android:foreground="?attr/selectableItemBackground"/>
 
 
 
@@ -64,7 +65,8 @@
             app:icon="@drawable/music"
             app:iconGravity="textStart"
             app:iconPadding="8dp"
-            app:iconTint="@color/black"/>
+            app:iconTint="@color/black"
+            android:foreground="?attr/selectableItemBackground"/>
 
         <Button
             android:id="@+id/buttonSettings"
@@ -80,7 +82,8 @@
             app:icon="@drawable/gearwheel"
             app:iconGravity="textStart"
             app:iconPadding="8dp"
-            app:iconTint="@color/black" />
+            app:iconTint="@color/black"
+            android:foreground="?attr/selectableItemBackground"/>
     </LinearLayout>
 
 </LinearLayout>
