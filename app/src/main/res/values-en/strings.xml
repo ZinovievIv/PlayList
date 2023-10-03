@@ -6,4 +6,8 @@
     <string name="settings" translatable="true">Settings</string>
     <string name="mediaLibrary" translatable="true">Media Library</string>
     <string name="darktheme" translatable="true">Dark theme</string>
+    <string name="share" translatable="true">Share App</string>
+    <string name="support" translatable="true">Write to support</string>
+    <string name="user_agreement" translatable="true">User Agreement</string>
+
 </resources>

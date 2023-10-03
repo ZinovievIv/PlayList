@@ -95,7 +95,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Поделиться приложением"
+                android:text="@string/share"
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:layout_gravity="start"
@@ -135,7 +135,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Написать в поддержку"
+                android:text="@string/support"
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:layout_gravity="start"
@@ -175,7 +175,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Пользовательское соглашение"
+                android:text="@string/user_agreement"
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:layout_gravity="start"

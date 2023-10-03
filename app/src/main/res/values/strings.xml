@@ -5,5 +5,7 @@
     <string name="settings">Настройки</string>
     <string name="mediaLibrary">Медиатека</string>
     <string name="darktheme">Темная тема</string>
-
+    <string name="share" >Поделиться приложением</string>
+    <string name="support" >Написать в поддержку</string>
+    <string name="user_agreement" >Пользовательское сошлашение</string>
 </resources>
