@@ -85,5 +85,4 @@
             app:iconTint="@color/black"
             android:foreground="?attr/selectableItemBackground"/>
     </LinearLayout>
-
 </LinearLayout>
