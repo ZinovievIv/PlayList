@@ -6,36 +6,39 @@
     android:orientation="vertical"
     android:background="@color/white">
 
-    <androidx.appcompat.widget.Toolbar
+    <LinearLayout
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingStart="4dp"
+        android:paddingEnd="52dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
         android:background="@android:color/white">
 
-        <Button
+        <ImageButton
+            android:id="@+id/arrow_back"
+            android:src="@drawable/arrow_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
             android:paddingVertical="12dp"
-            android:paddingHorizontal="12dp"
-            app:icon="@drawable/arrow_back"
-            app:iconTint="@color/black"/>
+            android:paddingHorizontal="12dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:paddingStart="12dp"
             android:paddingTop="10dp"
-            android:paddingBottom="12dp"
             android:paddingEnd="86dp"
-            android:gravity="center"
+            android:paddingBottom="12dp"
             android:text="@string/settings"
             android:textColor="@color/black"
-            android:textSize="22sp"/>
+            android:textSize="22sp" />
 
 
-
-    </androidx.appcompat.widget.Toolbar>
+    </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"

@@ -7,44 +7,47 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val buttonSearch = findViewById<Button>(R.id.buttonSearch)
         val buttonMedia = findViewById<Button>(R.id.buttonMedia)
         val buttonSettings = findViewById<Button>(R.id.buttonSettings)
-        val buttonSearchClickListener: View.OnClickListener = object : View.OnClickListener {
+        val buttonClickListener: View.OnClickListener = object : View.OnClickListener {
             override fun onClick(v: View?) {
-                val searchButton = findViewById<Button>(R.id.buttonSearch)
-                searchButton.setOnClickListener {
-                    val searchIntent = Intent(this@MainActivity, SearchActivity::class.java)
-                    startActivity(searchIntent)
+                when(v?.id){
+                    R.id.buttonSearch -> {
+                        val mediaLibraryIntent = Intent(this@MainActivity, MediaLibraryActivity::class.java)
+                        startActivity(mediaLibraryIntent)
+                    }
+                    R.id.buttonSettings -> {
+                        val buttonSettingsIntent = Intent(this@MainActivity, SettingsActivity::class.java)
+                        startActivity(buttonSettingsIntent)
+                    }
                 }
             }
         }
-        val buttonMediaClickListener: View.OnClickListener = View.OnClickListener {
-            val mediaLibraryButton = findViewById<Button>(R.id.buttonMedia)
-            mediaLibraryButton.setOnClickListener {
-                val mediaLibraryIntent = Intent(this@MainActivity, MediaLibraryActivity::class.java)
-                startActivity(mediaLibraryIntent)
-            }
+
+        buttonMedia.setOnClickListener{
+            val buttonMediaIntent = Intent(this@MainActivity, MediaLibraryActivity::class.java)
+            startActivity(buttonMediaIntent)
         }
 
-        buttonSearch.setOnClickListener(buttonSearchClickListener)
-        buttonMedia.setOnClickListener(buttonMediaClickListener)
-        buttonSettings.setOnClickListener(this@MainActivity)
-    }
+        buttonSearch.setOnClickListener(buttonClickListener)
+        buttonSettings.setOnClickListener(buttonClickListener)
 
-    override fun onClick(v: View?) {
-        when(v?.id) {
-            R.id.buttonSettings -> {
-                val settingsButton = findViewById<Button>(R.id.buttonSettings)
-                settingsButton.setOnClickListener {
-                    val settingsButtonIntent = Intent(this@MainActivity, SettingsActivity::class.java)
-                    startActivity(settingsButtonIntent)
-                }
-            }
-        }
+
+
+        //buttonMedia.setOnClickListener {
+         //   val mediaLibraryIntent = Intent(this@MainActivity, MediaLibraryActivity::class.java)
+         //   startActivity(mediaLibraryIntent)
+        //}
+
+        //buttonSettings.setOnClickListener {
+        //    val buttonSettingsIntent = Intent(this@MainActivity, SettingsActivity::class.java)
+        //    startActivity(buttonSettingsIntent)
+        //}
+
     }
 }
